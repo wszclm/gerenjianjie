@@ -1,0 +1,70 @@
+/*
+* @Author: lenovo
+* @Date:   2017-12-04 14:37:44
+* @Last Modified by:   lenovo
+* @Last Modified time: 2017-12-04 15:19:59
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;	
+}
+body{
+	background: #333;
+}
+.box{
+	width: 500px;
+	height: 500px;
+	margin: 50px auto;
+	border: 2px solid red;
+	perspective: 1000px;
+}
+.box ul{
+	width: 200px;
+	height: 200px;
+	margin: 150px;
+	position: relative;
+	transition: 2s;
+	transform-style: preserve-3d;
+}
+.box:hover ul{
+	transform: rotate3d(1, 1, 0, 360deg);
+}
+.box li{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	transition: 2s;
+}
+.box:hover .left{
+	transform: translateX(-100px) rotateY(90deg);
+	background: red;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.box:hover .right{
+	transform: translateX(100px) rotateY(90deg);
+	background: yellowgreen;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.box:hover .top{
+	transform: translateY(-100px) rotateX(90deg);
+	background: skyblue;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.box:hover .bottom{
+	transform: translateY(100px) rotateX(90deg);
+	background: orange;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.box:hover .before{
+	transform: translateZ(100px) rotateZ(90deg);
+	background: deeppink;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
+.box:hover .behind{
+	transform: translateZ(-100px) rotateZ(90deg);
+	background: yellow;
+	box-shadow: 0px 0px 10px 5px #ffffff;
+}
